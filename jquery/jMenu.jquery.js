@@ -30,8 +30,8 @@
 			absoluteTop : 30,
 			absoluteLeft : 0,
 			effects : {
-				effectSpeedOpen : 350,
-				effectSpeedClose : 350,
+				effectSpeedOpen : 150,
+				effectSpeedClose : 150,
 				effectTypeOpen : 'slide',
 				effectTypeClose : 'slide',
 				effectOpen : 'linear',
@@ -85,6 +85,7 @@
 				mouseover:function(){
 					var $this = $(this);
 					var $child = $this.next();
+					if ($child.is(':hidden') == false) return;
 					ULWidth = $.jMenu._returnUlWidth($this);
 					$.jMenu._closeList($("#jMenu ul"));
 					if($child.is(':hidden'))
