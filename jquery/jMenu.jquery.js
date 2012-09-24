@@ -33,12 +33,12 @@
 				effectSpeedOpen : 150,
 				effectSpeedClose : 150,
 				effectTypeOpen : 'slide',
-				effectTypeClose : 'slide',
+				effectTypeClose : 'hide',
 				effectOpen : 'linear',
 				effectClose : 'linear'
 			},
 			TimeBeforeOpening : 100,
-			TimeBeforeClosing : 400,
+			TimeBeforeClosing : 100,
 			animatedText : false,
 			paddingLeft: 7,
 			openClick : false
