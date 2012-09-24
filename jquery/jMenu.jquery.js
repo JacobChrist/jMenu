@@ -1,8 +1,8 @@
 /************************************************************************
 *************************************************************************
 @Name :       	jMenu - jQuery Plugin
-@Revison :    	1.8
-@Date : 		01/2012
+@Revison :    	1.9
+@Date : 		09/2012
 @Author:     	ALPIXEL - (www.myjqueryplugins.com - www.alpixel.fr)
 @Support:    	FF, IE7, IE8, MAC Firefox, MAC Safari
 @License :		Open Source - MIT License : http://www.opensource.org/licenses/mit-license.php
@@ -85,7 +85,7 @@
 				mouseover:function(){
 					var $this = $(this);
 					var $child = $this.next();
-					if ($child.is(':hidden') == false) return;
+					if ($child.length > 0 && $child.is(':hidden') == false) return;
 					ULWidth = $.jMenu._returnUlWidth($this);
 					$.jMenu._closeList($("#jMenu ul"));
 					if($child.is(':hidden'))
