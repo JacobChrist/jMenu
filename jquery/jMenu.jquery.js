@@ -37,8 +37,8 @@
 				effectOpen : 'linear',
 				effectClose : 'linear'
 			},
-			TimeBeforeOpening : 200,
-			TimeBeforeClosing : 200,
+			TimeBeforeOpening : 100,
+			TimeBeforeClosing : 400,
 			animatedText : false,
 			paddingLeft: 7,
 			openClick : false
@@ -211,8 +211,7 @@
 					break;
 				default :
 					el.hide();
-			}
-			
+			}			
 		},
 		
 		_closeAll:function(){
@@ -231,7 +230,7 @@
 		_returnUlWidth:function(el) {
 			switch(opts.ulWidth) {
 				case "auto" :
-					ULWidth = parseInt(el.parent().outerWidth());
+						ULWidth = parseInt(el.outerWidth(true));
 					break;
 				default :
 					ULWidth = parseInt(opts.ulWidth);
