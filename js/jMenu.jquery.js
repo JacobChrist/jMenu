@@ -304,6 +304,7 @@
 
     jQuery.fn.jMenu = function(options){
         $(this).addClass('jMenu');
+        $(this).children('li').children('a').addClass('fNiv');
         if($.jMenu._isReadable()) {
             $.jMenu.init(options);
         } else {
@@ -311,4 +312,3 @@
         }
     };
 })(jQuery);
-
