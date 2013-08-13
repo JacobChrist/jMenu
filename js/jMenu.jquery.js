@@ -43,7 +43,11 @@
             opts = $.extend({}, $.jMenu.defaults, options);
 
             // Set global width of the sub-menus links
-            $width = $('.fNiv').outerWidth(false);
+            if(opts.ulWidth == 'auto')
+                $width = $('.fNiv').outerWidth(false);
+            else
+                $width = opts.ulWidth;
+
 
 
             $(".jMenu li").each(function() {
@@ -57,7 +61,7 @@
 
                     var
                         $ul = $thisChild.next(),
-                        $position = $thisChild.offset();
+                        $position = $thisChild.position();
 
                     if($(this).hasClass('jmenu-level-0'))
                         $ul.css({
