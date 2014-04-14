@@ -80,7 +80,14 @@
                     if(!opts.openClick)
                         $(this).bind({
                             mouseenter:function() {
-                                $.jMenu._show($ul);
+                                if($(this).hasClass('jmenu-level-0')) {
+									$position = $(this).position();
+									$ul.css({
+										left: $position.left + opts.absoluteLeft,
+										top: $position.top + opts.absoluteTop
+									});
+								}
+								$.jMenu._show($ul);
                             },
                             mouseleave:function(){
                                 $.jMenu._closeList($ul);
